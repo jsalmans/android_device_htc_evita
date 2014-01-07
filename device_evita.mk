@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # common S4 configs
@@ -69,7 +72,8 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/htc/evita/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom
+    device/htc/evita/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom \
+    device/htc/evita/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -82,7 +86,7 @@ PRODUCT_PACKAGES += \
 
 # Torch
 PRODUCT_PACKAGES += \
-    Torch
+    OmniTorch
 
 # Permissions
 PRODUCT_COPY_FILES += \
