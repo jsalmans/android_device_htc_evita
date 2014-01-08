@@ -1,3 +1,4 @@
 #!/bin/sh
 
-add_lunch_combo evita-userdebug
+add_lunch_combo omni_evita-eng
+add_lunch_combo omni_evita-userdebug
